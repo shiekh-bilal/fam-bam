@@ -1,0 +1,22 @@
+{
+  "name": "fambam-ai-api",
+  "version": "1.0.0",
+  "description": "Node.js API that sends a prompt and prompt.pdf to OpenAI and returns the AI response.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "openai",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "openai": "^4.71.1"
+  }
+}
