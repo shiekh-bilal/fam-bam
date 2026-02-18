@@ -35,7 +35,7 @@ let pdfFileId = null;
  */
 app.post("/api/generate", async (req, res) => {
   try {
-    const { prompt } = req.body || {};
+    const { prompt, modelName } = req.body || {};
 
     console.log("pdfFileId = ", pdfFileId);
 
@@ -63,7 +63,7 @@ app.post("/api/generate", async (req, res) => {
 
     // Use that file in a response
     const response = await openai.responses.create({
-      model: "gpt-5.2",
+      model: modelName ? modelName : "gpt-5.2",
       input: [
         {
           role: "user",
